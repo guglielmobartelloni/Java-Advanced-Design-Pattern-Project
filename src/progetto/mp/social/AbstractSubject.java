@@ -1,9 +1,10 @@
 package progetto.mp.social;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public abstract class AbstractSubject {
-	private Collection<AbstractObserver> observers;
+	private Collection<AbstractObserver> observers=new ArrayList<>();
 	
 	public void attach(AbstractObserver observer) {
 		observers.add(observer);
