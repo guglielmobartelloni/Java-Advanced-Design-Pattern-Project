@@ -4,49 +4,70 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
+import progetto.mp.social.events.SocialEvent;
 import progetto.mp.social.utils.NotificationSender;
 
-public class Profile extends AbstractSubject implements AbstractObserver {
+public class Profile implements SocialObserver,SocialSubject {
 
 	private String surname;
-	private Collection<Post> posts=new ArrayList<>();
+	private Collection<Post> posts = new ArrayList<>();
+	private Collection<SocialObserver> observers = new ArrayList<>();
 	private NotificationSender senderService;
 	
-	public Profile(String surname,NotificationSender senderService) {
+	
+
+	public Profile(String surname, NotificationSender senderService) {
 		this.surname = surname;
 		this.senderService = senderService;
 	}
-	
+
 	/**
 	 * Only for testing
 	 */
-	String getSurname(){
-		return surname; 
+	String getSurname() {
+		return surname;
 	}
-	
-	
+
 	public void addPost(Post post) {
 		posts.add(post);
-		notifyObservers();
+		//TODO
 	}
+
 	public void removePost(Post post) {
 		posts.remove(post);
-		notifyObservers();
+		//TODO
 	}
 
 	/**
 	 * Only for testing
 	 */
-	Collection<Post> getPostsCollection(){
+	Collection<Post> getPostsCollection() {
 		return posts;
 	}
-	
-	public Iterator<Post> getPosts(){
+
+	public Iterator<Post> getPosts() {
 		return posts.iterator();
 	}
+
 	@Override
-	public void notifyChange() {
-		senderService.send("Nuovo post",surname);
+	public void notifyChange(SocialEvent event) {
+		//TODO
 	}
+
+	@Override
+	public void attach(SocialObserver observer) {
+		observers.add(observer);
+	}
+
+	@Override
+	public void detach(SocialObserver observer) {
+		observers.remove(observer);
+	}
+
+	@Override
+	public void notifyObservers(SocialEvent event) {
+		
+	}
+
 
 }

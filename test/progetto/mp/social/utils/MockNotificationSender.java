@@ -1,6 +1,5 @@
-package progetto.mp.social;
+package progetto.mp.social.utils;
 
-import progetto.mp.social.utils.NotificationSender;
 
 /**
  * This class is for testing only
@@ -31,6 +30,12 @@ public class MockNotificationSender extends NotificationSender {
 	@Override
 	public void send(String message, String recipient) {
 		this.message += recipient + " " + message;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return message;
 	}
 
 }
