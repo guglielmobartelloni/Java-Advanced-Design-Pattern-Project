@@ -6,7 +6,7 @@ public abstract class PostWithMediaDecorator extends Post {
 
 	private Media media;
 
-	public PostWithMediaDecorator(Post ,Media media) {
+	public PostWithMediaDecorator(Post post,Media media) {
 		super(content);
 		this.media = media;
 	}
