@@ -36,6 +36,13 @@ public class ProfileTest {
 		assertThat(profile.getPostsCollection()).containsExactly(postTwo);
 	}
 	
+	
+	@Test
+	public void testAddedPostEvent() {
+		profile.attach(new Profile("aProfileObserver",new MockNotificationSender()));
+		
+	}
+	
 
 	
 }

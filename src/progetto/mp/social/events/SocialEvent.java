@@ -14,5 +14,5 @@ public abstract class SocialEvent {
 		return component;
 	}
 
-	abstract void accept(SocialEventVisitor visitor);
+	public abstract void accept(SocialEventVisitor visitor);
 }
