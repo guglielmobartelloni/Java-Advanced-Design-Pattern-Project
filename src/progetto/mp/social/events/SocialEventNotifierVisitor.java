@@ -2,12 +2,12 @@ package progetto.mp.social.events;
 
 import progetto.mp.social.utils.NotificationSender;
 
-public final class SocialEventProfileVisitor implements SocialEventVisitor {
+public final class SocialEventNotifierVisitor implements SocialEventVisitor {
 
 	private String recipient;
 	private NotificationSender senderService;
 
-	public SocialEventProfileVisitor(NotificationSender senderService, String recipient) {
+	public SocialEventNotifierVisitor(NotificationSender senderService, String recipient) {
 		this.senderService = senderService;
 		this.recipient = recipient;
 	}

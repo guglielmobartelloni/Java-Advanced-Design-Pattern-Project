@@ -8,7 +8,7 @@ import java.util.Iterator;
 import progetto.mp.social.events.AddedPostEvent;
 import progetto.mp.social.events.RemovedPostEvent;
 import progetto.mp.social.events.SocialEvent;
-import progetto.mp.social.events.SocialEventProfileVisitor;
+import progetto.mp.social.events.SocialEventNotifierVisitor;
 import progetto.mp.social.utils.NotificationSender;
 
 public class Profile implements SocialObserver, SocialSubject {
@@ -53,7 +53,7 @@ public class Profile implements SocialObserver, SocialSubject {
 
 	@Override
 	public void notifyChange(SocialEvent event) {
-		event.accept(new SocialEventProfileVisitor(senderService, surname));
+		event.accept(new SocialEventNotifierVisitor(senderService, surname));
 	}
 
 	@Override

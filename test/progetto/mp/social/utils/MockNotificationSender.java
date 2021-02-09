@@ -9,10 +9,10 @@ public class MockNotificationSender extends NotificationSender {
 	/**
 	 * The message that is going to be sent
 	 */
-	private String message;
+	private String sendingMessage;
 
 	public MockNotificationSender() {
-		this.message = new String();
+		this.sendingMessage = new String();
 	}
 
 	/**
@@ -20,12 +20,12 @@ public class MockNotificationSender extends NotificationSender {
 	 */
 	@Override
 	public void send(String message, String recipient) {
-		this.message ="Hello "+recipient+  "\n " + message ;
+		this.sendingMessage ="Hello "+recipient+  "\n " + message ;
 	}
 
 	@Override
 	public String toString() {
-		return message;
+		return sendingMessage;
 	}
 
 }

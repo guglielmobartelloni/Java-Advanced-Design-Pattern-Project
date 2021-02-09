@@ -1,6 +1,7 @@
 package progetto.mp.social;
 
 import org.junit.Before;
+
 import org.junit.Test;
 
 import progetto.mp.social.utils.MockNotificationSender;
