@@ -26,10 +26,10 @@ public class Profile implements SocialObserver, SocialSubject {
 	/**
 	 * Only for testing
 	 */
-	String getSurname() {
-		return surname;
+	Collection<SocialObserver> getObservers(){
+		return observers;
 	}
-
+	
 	public void addPost(Post post) {
 		posts.add(post);
 		notifyObservers(new AddedPostEvent(post));

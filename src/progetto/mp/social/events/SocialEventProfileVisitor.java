@@ -14,22 +14,22 @@ public final class SocialEventProfileVisitor implements SocialEventVisitor {
 
 	@Override
 	public void visitAddedPost(SocialEvent event) {
-		senderService.send("New Post", recipient);
+		senderService.send("New Post: " + event.getComponent().getContent(), recipient);
 	}
 
 	@Override
 	public void visitAddedComment(SocialEvent event) {
-		senderService.send("New comment", recipient);
+		senderService.send("New comment: " + event.getComponent().getContent(), recipient);
 	}
 
 	@Override
 	public void visitRemovedPost(SocialEvent event) {
-		senderService.send("A post has been removed", recipient);
+		senderService.send("A post has been removed: " + event.getComponent().getContent(), recipient);
 	}
 
 	@Override
 	public void visitRemovedComment(SocialEvent event) {
-		senderService.send("A comment has been removed", recipient);
+		senderService.send("A comment has been removed: " + event.getComponent().getContent(), recipient);
 
 	}
 

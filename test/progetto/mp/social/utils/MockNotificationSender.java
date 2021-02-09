@@ -1,6 +1,5 @@
 package progetto.mp.social.utils;
 
-
 /**
  * This class is for testing only
  *
@@ -17,22 +16,13 @@ public class MockNotificationSender extends NotificationSender {
 	}
 
 	/**
-	 * Method for testing
-	 * 
-	 */
-	String getMessage() {
-		return this.message;
-	}
-
-	/**
 	 * Method that adds to the message the name of the recipient
 	 */
 	@Override
 	public void send(String message, String recipient) {
-		this.message += recipient + " " + message;
+		this.message ="Hello "+recipient+  "\n " + message ;
 	}
-	
-	
+
 	@Override
 	public String toString() {
 		return message;
