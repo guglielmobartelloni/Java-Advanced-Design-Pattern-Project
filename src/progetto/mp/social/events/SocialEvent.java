@@ -1,16 +1,16 @@
 package progetto.mp.social.events;
 
-import progetto.mp.social.Component;
+import progetto.mp.social.Postable;
 
 public abstract class SocialEvent {
 
-	private Component component;
+	private Postable component;
 
-	public SocialEvent(Component component) {
+	public SocialEvent(Postable component) {
 		this.component = component;
 	}
 
-	public Component getComponent() {
+	public Postable getComponent() {
 		return component;
 	}
 

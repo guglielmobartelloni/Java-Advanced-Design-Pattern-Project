@@ -5,19 +5,19 @@ import java.util.Collection;
 
 import progetto.mp.social.events.SocialEvent;
 
-public abstract class Post extends Component implements SocialSubject {
-
+public abstract class Postable implements SocialSubject{
+	private Content content;
+	
 	private Collection<SocialObserver> observers = new ArrayList<>();
-	private Collection<Comment> comments = new ArrayList<>();
 
-	public void addComment(Comment comment) {
-		comments.add(comment);
+	public Postable(Content content) {
+		this.content=content;
 	}
 
-	public void removeComment(Comment comment) {
-		comments.remove(comment);
+	public Content getContent() {
+		return content;
 	}
-
+	
 	public void attach(SocialObserver observer) {
 		observers.add(observer);
 	}
@@ -28,10 +28,6 @@ public abstract class Post extends Component implements SocialSubject {
 
 	public void notifyObservers(SocialEvent event) {
 		observers.forEach(e -> e.notifyChange(event));
-	}
-
-	public Post(String content) {
-		super(content);
 	}
 
 }

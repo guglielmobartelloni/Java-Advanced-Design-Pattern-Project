@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import progetto.mp.social.utils.MockNotificationSender;
+import progetto.mp.social.utils.MockTextContent;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -20,15 +21,15 @@ public class ProfileTest {
 
 	@Test
 	public void testAddPost() {
-		Post post = new QuotePost("this is a test post");
+		PostableText post = new PostableText(new MockTextContent("this is a test post"));
 		profile.addPost(post);
 		assertThat(profile.getPostsCollection()).containsExactly(post);
 	}
 
 	@Test
 	public void testRemovePost() {
-		Post postOne = new QuotePost("this is a test post one");
-		Post postTwo = new QuotePost("this is a test two");
+		PostableText postOne = new PostableText(new MockTextContent("this is a test post one"));
+		PostableText postTwo = new PostableText(new MockTextContent("this is a test two"));
 		profile.addPost(postTwo);
 		profile.addPost(postOne);
 		profile.removePost(postOne);
@@ -68,11 +69,11 @@ public class ProfileTest {
 		profile.attach(new Profile("aProfileObserver", senderService));
 		profile.attach(new Profile("anotherProfileObserver", anotherSenderService));
 
-		profile.addPost(new QuotePost("this is a quote post"));
+		profile.addPost(new PostableText(new MockTextContent("this is a quote post")));
 		assertThat(senderService.toString()).isEqualTo("Hello aProfileObserver\n" + " New Post: this is a quote post");
 		assertThat(anotherSenderService.toString()).isEqualTo("Hello anotherProfileObserver\n" + " New Post: this is a quote post");
 
-		profile.addPost(new QuotePost("this is another quote post"));
+		profile.addPost(new PostableText(new MockTextContent("this is another quote post")));
 		assertThat(senderService.toString()).isEqualTo("Hello aProfileObserver\n" + " New Post: this is another quote post");
 		assertThat(anotherSenderService.toString())
 				.isEqualTo("Hello anotherProfileObserver\n" + " New Post: this is another quote post");
@@ -85,8 +86,8 @@ public class ProfileTest {
 		profile.attach(new Profile("anotherProfileObserver", anotherSenderService));
 		profile.attach(new Profile("aProfileObserver", senderService));
 
-		QuotePost aPost = new QuotePost("this is a quote post");
-		QuotePost aSecondPost = new QuotePost("this is a second quote post");
+		PostableText aPost = new PostableText(new MockTextContent("this is a quote post"));
+		PostableText aSecondPost = new PostableText(new MockTextContent("this is a second quote post"));
 		profile.addPost(aPost);
 		profile.addPost(aSecondPost);
 
@@ -104,11 +105,14 @@ public class ProfileTest {
 	}
 	
 	
+	//TODO test per le immagini
+	
+	
 	@Test
 	public void testGetPosts() {
-		QuotePost aPost = new QuotePost("this is a post");
+		PostableText aPost = new PostableText(new MockTextContent("this is a post"));
 		profile.addPost(aPost);
-		QuotePost aSecondPost = new QuotePost("this is another post");
+		PostableText aSecondPost = new PostableText(new MockTextContent("this is another post"));
 		profile.addPost(aSecondPost);
 		
 		assertThat(profile.getPosts()).toIterable().containsExactly(aPost,aSecondPost);

@@ -1,10 +1,10 @@
 package progetto.mp.social.events;
 
-import progetto.mp.social.Component;
+import progetto.mp.social.Postable;
 
 public final class RemovedPostEvent extends SocialEvent {
 
-	public RemovedPostEvent(Component component) {
+	public RemovedPostEvent(Postable component) {
 		super(component);
 	}
 

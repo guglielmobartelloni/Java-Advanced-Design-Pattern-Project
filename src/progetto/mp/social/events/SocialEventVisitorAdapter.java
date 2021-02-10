@@ -14,7 +14,7 @@ public abstract class SocialEventVisitorAdapter implements SocialEventVisitor {
 	 * Default implementation does nothing.
 	 */
 	@Override
-	public void visitAddedComment(SocialEvent event) {
+	public void visitAddedImage(SocialEvent event) {
 
 	}
 
@@ -29,7 +29,7 @@ public abstract class SocialEventVisitorAdapter implements SocialEventVisitor {
 	 * Default implementation does nothing.
 	 */
 	@Override
-	public void visitRemovedComment(SocialEvent event) {
+	public void visitRemovedImage(SocialEvent event) {
 	}
 
 }

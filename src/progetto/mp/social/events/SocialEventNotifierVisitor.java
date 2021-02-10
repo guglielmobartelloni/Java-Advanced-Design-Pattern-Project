@@ -18,8 +18,8 @@ public final class SocialEventNotifierVisitor implements SocialEventVisitor {
 	}
 
 	@Override
-	public void visitAddedComment(SocialEvent event) {
-		senderService.send("New comment: " + event.getComponent().getContent(), recipient);
+	public void visitAddedImage(SocialEvent event) {
+		senderService.send("New image: " + event.getComponent().getContent(), recipient);
 	}
 
 	@Override
@@ -28,8 +28,8 @@ public final class SocialEventNotifierVisitor implements SocialEventVisitor {
 	}
 
 	@Override
-	public void visitRemovedComment(SocialEvent event) {
-		senderService.send("A comment has been removed: " + event.getComponent().getContent(), recipient);
+	public void visitRemovedImage(SocialEvent event) {
+		senderService.send("An image has been removed: " + event.getComponent().getContent(), recipient);
 
 	}
 
