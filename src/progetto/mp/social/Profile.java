@@ -14,7 +14,7 @@ import progetto.mp.social.utils.NotificationSender;
 public class Profile extends SocialSubject implements SocialObserver {
 
 	private String surname;
-	private Collection<Postable> posts = new ArrayList<>();
+	private Collection<Post> posts = new ArrayList<>();
 	private NotificationSender senderService;
 
 	public Profile(String surname, NotificationSender senderService) {
@@ -23,12 +23,12 @@ public class Profile extends SocialSubject implements SocialObserver {
 	}
 
 	
-	public void addPost(Postable post) {
+	public void addPost(Post post) {
 		posts.add(post);
 		notifyObservers(new AddedPostEvent(post));
 	}
 
-	public void removePost(Postable post) {
+	public void removePost(Post post) {
 		posts.remove(post);
 		notifyObservers(new RemovedPostEvent(post));
 	}
@@ -36,11 +36,11 @@ public class Profile extends SocialSubject implements SocialObserver {
 	/**
 	 * Only for testing
 	 */
-	Collection<Postable> getPostsCollection() {
+	Collection<Post> getPostsCollection() {
 		return posts;
 	}
 
-	public Iterator<Postable> getPosts() {
+	public Iterator<Post> getPosts() {
 		return posts.iterator();
 	}
 

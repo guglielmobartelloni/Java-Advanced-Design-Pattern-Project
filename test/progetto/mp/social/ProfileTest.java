@@ -22,15 +22,15 @@ public class ProfileTest {
 
 	@Test
 	public void testAddPost() {
-		PostableText post = new PostableText("this is a test post");
+		Post post = new Post(new PostableText("this is a test post"));
 		profile.addPost(post);
 		assertThat(profile.getPostsCollection()).containsExactly(post);
 	}
 
 	@Test
 	public void testRemovePost() {
-		PostableText postOne = new PostableText("this is a test post one");
-		PostableText postTwo = new PostableText("this is a test two");
+		Post postOne = new Post(new PostableText("this is a test post one"));
+		Post postTwo =new Post( new PostableText("this is a test two"));
 		profile.addPost(postTwo);
 		profile.addPost(postOne);
 		profile.removePost(postOne);
@@ -70,14 +70,19 @@ public class ProfileTest {
 		profile.attach(new Profile("aProfileObserver", senderService));
 		profile.attach(new Profile("anotherProfileObserver", anotherSenderService));
 
-		profile.addPost(new PostableText("this is a quote post"));
-		assertThat(senderService.toString()).isEqualTo("Hello aProfileObserver\n" + " New Post: this is a quote post");
-		assertThat(anotherSenderService.toString()).isEqualTo("Hello anotherProfileObserver\n" + " New Post: this is a quote post");
+		profile.addPost(new Post(new PostableText("this is a quote post")));
+		assertThat(senderService.toString()).isEqualTo("Hello aProfileObserver\n"
+				+ " New Post: this is a quote post\n"
+				+ "");
+		assertThat(anotherSenderService.toString()).isEqualTo("Hello anotherProfileObserver\n" + " New Post: this is a quote post\n"
+				+ "");
 
-		profile.addPost(new PostableText("this is another quote post"));
-		assertThat(senderService.toString()).isEqualTo("Hello aProfileObserver\n" + " New Post: this is another quote post");
+		profile.addPost(new Post(new PostableText("this is another quote post")));
+		assertThat(senderService.toString()).isEqualTo("Hello aProfileObserver\n" + " New Post: this is another quote post\n"
+				+ "");
 		assertThat(anotherSenderService.toString())
-				.isEqualTo("Hello anotherProfileObserver\n" + " New Post: this is another quote post");
+				.isEqualTo("Hello anotherProfileObserver\n" + " New Post: this is another quote post\n"
+				+ "");
 	}
 
 	@Test
@@ -87,22 +92,26 @@ public class ProfileTest {
 		profile.attach(new Profile("anotherProfileObserver", anotherSenderService));
 		profile.attach(new Profile("aProfileObserver", senderService));
 
-		PostableText aPost = new PostableText("this is a quote post");
-		PostableText aSecondPost = new PostableText("this is a second quote post");
+		Post aPost = new Post(new PostableText("this is a quote post"));
+		Post aSecondPost = new Post(new PostableText("this is a second quote post"));
 		profile.addPost(aPost);
 		profile.addPost(aSecondPost);
 
 		profile.removePost(aPost);
 		assertThat(senderService.toString())
-				.isEqualTo("Hello aProfileObserver\n" + " A post has been removed: this is a quote post");
+				.isEqualTo("Hello aProfileObserver\n" + " A post has been removed: this is a quote post\n"
+				+ "");
 		assertThat(anotherSenderService.toString())
-				.isEqualTo("Hello anotherProfileObserver\n" + " A post has been removed: this is a quote post");
+				.isEqualTo("Hello anotherProfileObserver\n" + " A post has been removed: this is a quote post\n"
+				+ "");
 
 		profile.removePost(aSecondPost);
 		assertThat(senderService.toString())
-				.isEqualTo("Hello aProfileObserver\n" + " A post has been removed: this is a second quote post");
+				.isEqualTo("Hello aProfileObserver\n" + " A post has been removed: this is a second quote post\n"
+				+ "");
 		assertThat(anotherSenderService.toString())
-				.isEqualTo("Hello anotherProfileObserver\n" + " A post has been removed: this is a second quote post");
+				.isEqualTo("Hello anotherProfileObserver\n" + " A post has been removed: this is a second quote post\n"
+				+ "");
 	}
 	
 	
@@ -111,9 +120,9 @@ public class ProfileTest {
 	
 	@Test
 	public void testGetPosts() {
-		PostableText aPost = new PostableText("this is a post");
+		Post aPost =new Post( new PostableText("this is a post"));
 		profile.addPost(aPost);
-		PostableText aSecondPost = new PostableText("this is another post");
+		Post aSecondPost =new Post( new PostableText("this is another post"));
 		profile.addPost(aSecondPost);
 		
 		assertThat(profile.getPosts()).toIterable().containsExactly(aPost,aSecondPost);
