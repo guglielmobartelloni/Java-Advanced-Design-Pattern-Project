@@ -61,7 +61,7 @@
   </class>  
   <class id="7" language="java" name="progetto.mp.social.Post" project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/Post.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="477" y="114"/>    
+    <position height="-1" width="-1" x="545" y="95"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -72,7 +72,7 @@
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/AddedContentToPostEvent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="546" y="893"/>    
+    <position height="-1" width="-1" x="717" y="920"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -105,7 +105,7 @@
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/RemovedContentToPostEvent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="797" y="893"/>    
+    <position height="-1" width="-1" x="968" y="920"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -116,7 +116,7 @@
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/AddedPostEvent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1031" y="893"/>    
+    <position height="-1" width="-1" x="1202" y="920"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -137,7 +137,7 @@
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/RemovedPostEvent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1242" y="893"/>    
+    <position height="-1" width="-1" x="1413" y="920"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
