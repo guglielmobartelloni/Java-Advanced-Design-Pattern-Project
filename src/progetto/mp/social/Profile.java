@@ -11,11 +11,10 @@ import progetto.mp.social.events.SocialEvent;
 import progetto.mp.social.events.SocialEventNotifierVisitor;
 import progetto.mp.social.utils.NotificationSender;
 
-public class Profile implements SocialObserver, SocialSubject {
+public class Profile extends SocialSubject implements SocialObserver {
 
 	private String surname;
 	private Collection<Postable> posts = new ArrayList<>();
-	private Collection<SocialObserver> observers = new ArrayList<>();
 	private NotificationSender senderService;
 
 	public Profile(String surname, NotificationSender senderService) {
@@ -23,19 +22,13 @@ public class Profile implements SocialObserver, SocialSubject {
 		this.senderService = senderService;
 	}
 
-	/**
-	 * Only for testing
-	 */
-	Collection<SocialObserver> getObservers(){
-		return observers;
-	}
 	
-	public void addPost(PostableText post) {
+	public void addPost(Postable post) {
 		posts.add(post);
 		notifyObservers(new AddedPostEvent(post));
 	}
 
-	public void removePost(PostableText post) {
+	public void removePost(Postable post) {
 		posts.remove(post);
 		notifyObservers(new RemovedPostEvent(post));
 	}
@@ -56,19 +49,5 @@ public class Profile implements SocialObserver, SocialSubject {
 		event.accept(new SocialEventNotifierVisitor(senderService, surname));
 	}
 
-	@Override
-	public void attach(SocialObserver observer) {
-		observers.add(observer);
-	}
-
-	@Override
-	public void detach(SocialObserver observer) {
-		observers.remove(observer);
-	}
-
-	@Override
-	public void notifyObservers(SocialEvent event) {
-		observers.forEach(o -> o.notifyChange(event));
-	}
 
 }

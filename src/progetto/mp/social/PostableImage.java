@@ -1,15 +1,16 @@
 package progetto.mp.social;
 
-public class PostableImage extends Postable {
+public class PostableImage implements Postable {
 
-	public PostableImage(ImageContent content) {
-		super(content);
+	private String imagePath;
+
+	public PostableImage(String imagePath) {
+		this.imagePath = imagePath;
 	}
 
-	
-	//TODO
-	
-
-	
+	@Override
+	public String getContent() {
+		return imagePath;
+	}
 
 }

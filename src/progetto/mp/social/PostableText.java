@@ -1,10 +1,18 @@
 package progetto.mp.social;
 
 
-public class PostableText extends Postable {
+public class PostableText implements Postable {
 
-	public PostableText(TextContent content) {
-		super(content);
+	private String content;
+
+	public PostableText(String content) {
+		this.content = content;
 	}
+
+	@Override
+	public String getContent() {
+		return content;
+	}
+
 
 }

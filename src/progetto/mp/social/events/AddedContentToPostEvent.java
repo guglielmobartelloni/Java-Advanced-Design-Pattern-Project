@@ -2,15 +2,15 @@ package progetto.mp.social.events;
 
 import progetto.mp.social.Postable;
 
-public final class RemovedImageEvent extends SocialEvent {
+public final class AddedContentToPostEvent extends SocialEvent{
 
-	public RemovedImageEvent(Postable component) {
+	public AddedContentToPostEvent(Postable component) {
 		super(component);
 	}
 
 	@Override
 	public void accept(SocialEventVisitor visitor) {
-		visitor.visitRemovedImage(this);
+		visitor.visitAddedContent(this);
 	}
 
 }
