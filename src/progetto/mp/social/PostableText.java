@@ -14,5 +14,10 @@ public class PostableText implements Postable {
 		return content;
 	}
 
+	@Override
+	public <T> T accept(PostableVisitor<T> visitor) {
+		return visitor.visitPostableText(this);
+	}
+
 
 }

@@ -1,11 +1,11 @@
 package progetto.mp.social.events;
 
 public interface SocialEventVisitor {
-	void visitAddedPost(SocialEvent event);
+	void visitAddedPost(AddedPostEvent event);
 
-	void visitAddedContent(SocialEvent event);
+	void visitAddedContent(AddedContentToPostEvent event);
 
-	void visitRemovedPost(SocialEvent event);
+	void visitRemovedPost(RemovedPostEvent event);
 
-	void visitRemovedContent(SocialEvent event);
+	void visitRemovedContent(RemovedContentToPostEvent event);
 }

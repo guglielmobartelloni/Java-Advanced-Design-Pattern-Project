@@ -1,5 +1,6 @@
 package progetto.mp.social.events;
 
+import progetto.mp.social.PostablePrintVisitor;
 import progetto.mp.social.utils.NotificationSender;
 
 public final class SocialEventNotifierVisitor implements SocialEventVisitor {
@@ -13,23 +14,23 @@ public final class SocialEventNotifierVisitor implements SocialEventVisitor {
 	}
 
 	@Override
-	public void visitAddedPost(SocialEvent event) {
-		senderService.send("New Post: " + event.getComponent().getContent(), recipient);
+	public void visitAddedPost(AddedPostEvent event) {
+		senderService.send("New Post: \n" + event.getComponent().accept(new PostablePrintVisitor()), recipient);
 	}
 
 	@Override
-	public void visitAddedContent(SocialEvent event) {
-		senderService.send("New content in a post: " + event.getComponent().getContent(), recipient);
+	public void visitAddedContent(AddedContentToPostEvent event) {
+		senderService.send("New content in a post: \n" + event.getComponent().accept(new PostablePrintVisitor()), recipient);
 	}
 
 	@Override
-	public void visitRemovedPost(SocialEvent event) {
-		senderService.send("A post has been removed: " + event.getComponent().getContent(), recipient);
+	public void visitRemovedPost(RemovedPostEvent event) {
+		senderService.send("A post has been removed: \n" + event.getComponent().accept(new PostablePrintVisitor()), recipient);
 	}
 
 	@Override
-	public void visitRemovedContent(SocialEvent event) {
-		senderService.send("A content in a post has been removed: " + event.getComponent().getContent(), recipient);
+	public void visitRemovedContent(RemovedContentToPostEvent event) {
+		senderService.send("A content in a post has been removed: \n" + event.getComponent().accept(new PostablePrintVisitor()), recipient);
 
 	}
 

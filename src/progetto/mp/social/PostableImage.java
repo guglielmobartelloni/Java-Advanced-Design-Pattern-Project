@@ -16,4 +16,9 @@ public class PostableImage implements Postable {
 		return imagePath;
 	}
 
+	@Override
+	public <T> T accept(PostableVisitor<T> visitor) {
+		return visitor.visitPostableImage(this);
+	}
+
 }

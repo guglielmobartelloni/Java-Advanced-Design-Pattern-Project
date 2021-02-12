@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
-  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="progetto.mp.social.SocialSubject" project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/SocialSubject.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -23,7 +23,7 @@
   </interface>  
   <class id="3" language="java" name="progetto.mp.social.Profile" project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/Profile.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="205" width="223" x="629" y="198"/>    
+    <position height="-1" width="-1" x="833" y="251"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -32,7 +32,7 @@
   </class>  
   <interface id="4" language="java" name="progetto.mp.social.Postable" project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/Postable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="79" width="118" x="471" y="443"/>    
+    <position height="-1" width="-1" x="476" y="489"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -79,29 +79,18 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="progetto.mp.social.events.SocialEventVisitorAdapter" 
-    project="progetto.mp.guglielmo.bartelloni" 
-    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/SocialEventVisitorAdapter.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="299" y="693"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="progetto.mp.social.events.SocialEventNotifierVisitor" 
+  <class id="9" language="java" name="progetto.mp.social.events.SocialEventNotifierVisitor" 
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/SocialEventNotifierVisitor.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="579" y="711"/>    
+    <position height="-1" width="-1" x="264" y="887"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="progetto.mp.social.events.RemovedContentToPostEvent" 
+  <class id="10" language="java" name="progetto.mp.social.events.RemovedContentToPostEvent" 
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/RemovedContentToPostEvent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -112,7 +101,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="progetto.mp.social.events.AddedPostEvent" 
+  <class id="11" language="java" name="progetto.mp.social.events.AddedPostEvent" 
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/AddedPostEvent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -123,17 +112,17 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="progetto.mp.social.events.SocialEvent" project="progetto.mp.guglielmo.bartelloni" 
+  <class id="12" language="java" name="progetto.mp.social.events.SocialEvent" project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/SocialEvent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="894" y="675"/>    
+    <position height="-1" width="-1" x="1115" y="689"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="progetto.mp.social.events.RemovedPostEvent" 
+  <class id="13" language="java" name="progetto.mp.social.events.RemovedPostEvent" 
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/RemovedPostEvent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
@@ -144,99 +133,99 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="15" language="java" name="progetto.mp.social.events.SocialEventVisitor" 
+  <interface id="14" language="java" name="progetto.mp.social.events.SocialEventVisitor" 
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/SocialEventVisitor.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="299" y="911"/>    
+    <position height="-1" width="-1" x="281" y="716"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <generalization id="16">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="13"/>  
-  </generalization>  
-  <generalization id="17">    
-    <end type="SOURCE" refId="7"/>    
+  <generalization id="15">    
+    <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="1"/>  
   </generalization>  
-  <realization id="18">    
+  <realization id="16">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <realization id="17">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <generalization id="18">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="19">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <association id="20">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="21" name="contents">        
+        <position height="0" width="0" x="-54" y="7"/>      
+      </attribute>      
+      <multiplicity id="22" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="-54" y="7"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="23">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="4"/>  
   </realization>  
-  <realization id="19">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="4"/>  
+  <generalization id="24">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="12"/>  
+  </generalization>  
+  <generalization id="25">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <realization id="26">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="14"/>  
   </realization>  
-  <association id="20">    
-    <bendpoint x="882" y="198"/>    
+  <association id="27">    
+    <bendpoint x="1001" y="298"/>    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="21" name="observers"/>      
-      <multiplicity id="22" minimum="0" maximum="2147483647"/>    
+      <attribute id="28" name="observers">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="29" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="23">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="24" name="posts"/>      
-      <multiplicity id="25" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="26">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="27" name="contents"/>      
-      <multiplicity id="28" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="29">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
   <generalization id="30">    
     <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="13"/>  
+    <end type="TARGET" refId="12"/>  
   </generalization>  
-  <realization id="31">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <generalization id="32">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="13"/>  
-  </generalization>  
-  <association id="33">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="34" name="component"/>      
-      <multiplicity id="35" minimum="0" maximum="1"/>    
+  <association id="31">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="32" name="component">        
+        <position height="0" width="0" x="-54" y="7"/>      
+      </attribute>      
+      <multiplicity id="33" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-54" y="7"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="36">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <generalization id="37">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="13"/>  
-  </generalization>  
-  <realization id="38">    
-    <end type="SOURCE" refId="7"/>    
+  <realization id="34">    
+    <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="4"/>  
   </realization>  
-  <realization id="39">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="15"/>  
-  </realization>  
-  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
     <operations public="true" package="true" protected="true" private="true" static="true"/>  

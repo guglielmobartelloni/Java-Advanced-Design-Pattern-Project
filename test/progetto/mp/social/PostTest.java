@@ -30,7 +30,7 @@ public class PostTest {
 	}
 
 	@Test
-	public void testRemoveContent() {
+	public void testAddAndRemoveContent() {
 		PostableText aText = new PostableText("this is a second postable");
 		post.addContent(aText);
 		PostableText anotherText = new PostableText("this is a postable");
@@ -45,7 +45,7 @@ public class PostTest {
 	}
 
 	@Test
-	public void testgetContentNonEmptyPost() {
+	public void testGetContentNonEmptyPost() {
 		PostableText aText = new PostableText("this is a second postable");
 		post.addContent(aText);
 		PostableText anotherText = new PostableText("this is a postable");
@@ -55,14 +55,15 @@ public class PostTest {
 				new Post(new PostableText("this is a text inside a post inside another post")));
 		post.addContent(aPost);
 
-		assertThat(post.getContent()).isEqualTo("this is a second postable\n" + "this is a postable\n"
-				+ "this is a text inside a post\n" + "this is another text inside a post\n"
-				+ "this is a text inside a post inside another post\n" + "\n" + "\n" + "");
+		assertThat(post.getContent()).isEqualTo("Post: \n" + "this is a second postable\n" + "this is a postable\n"
+				+ "Post: \n" + "this is a text inside a post\n" + "this is another text inside a post\n" + "Post: \n"
+				+ "this is a text inside a post inside another post\n" + "");
 	}
 
 	@Test
-	public void testgetContentEmptyPost() {
-		assertThat(post.getContent()).isEqualTo("");
+	public void testGetContentEmptyPost() {
+		assertThat(post.getContent()).isEqualTo("Post: \n"
+				+ "");
 	}
 
 	@Test
@@ -73,19 +74,45 @@ public class PostTest {
 		PostableText aText = new PostableText("this is a second postable");
 		post.addContent(aText);
 		assertThat(senderService.toString())
-				.isEqualTo("Hello aProfile\n" + " New content in a post: this is a second postable");
+				.isEqualTo("Hello aProfile\n" + " New content in a post: \n" + "this is a second postable\n" + "");
 
 		PostableText anotherText = new PostableText("this is a postable");
 		post.addContent(anotherText);
 		assertThat(senderService.toString())
-				.isEqualTo("Hello aProfile\n" + " New content in a post: this is a postable");
+				.isEqualTo("Hello aProfile\n"
+						+ " New content in a post: \n"
+						+ "this is a postable\n"
+						+ "");
 		Post aPost = new Post(new PostableText("this is a text inside a post"),
 				new PostableText("this is another text inside a post"));
 		post.addContent(aPost);
 		assertThat(senderService.toString())
-				.isEqualTo("Hello aProfile\n" + " New content in a post: this is a text inside a post\n"
-						+ "this is another text inside a post\n" + "");
+				.isEqualTo("Hello aProfile\n"
+						+ " New content in a post: \n"
+						+ "Post: \n"
+						+ "this is a text inside a post\n"
+						+ "this is another text inside a post\n"
+						+ "");
 
+	}
+
+	@Test
+	public void testGetContent() {
+		PostableText anotherText = new PostableText("this is a postable");
+		post.addContent(anotherText);
+		PostableText aText = new PostableText("this is a second postable");
+		post.addContent(aText);
+		Post aPost = new Post(new PostableText("this is a text inside a post"),
+				new PostableText("this is another text inside a post"));
+		post.addContent(aPost);
+
+		assertThat(post.getContent()).isEqualTo("Post: \n"
+				+ "this is a postable\n"
+				+ "this is a second postable\n"
+				+ "Post: \n"
+				+ "this is a text inside a post\n"
+				+ "this is another text inside a post\n"
+				+ "");
 	}
 
 	@Test
@@ -105,13 +132,19 @@ public class PostTest {
 		post.removeContent(aPost);
 
 		assertThat(senderService.toString())
-				.isEqualTo("Hello aProfile\n" + " A content in a post has been removed: this is a text inside a post\n"
-						+ "this is another text inside a post\n" + "");
+				.isEqualTo("Hello aProfile\n"
+						+ " A content in a post has been removed: \n"
+						+ "Post: \n"
+						+ "this is a text inside a post\n"
+						+ "this is another text inside a post\n"
+						+ "");
 
 		post.removeContent(anotherText);
 
 		assertThat(senderService.toString())
 				.isEqualTo("Hello aProfile\n"
-						+ " A content in a post has been removed: this is a postable");
+						+ " A content in a post has been removed: \n"
+						+ "this is a postable\n"
+						+ "");
 	}
 }

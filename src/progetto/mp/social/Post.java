@@ -2,20 +2,21 @@ package progetto.mp.social;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 import progetto.mp.social.events.AddedContentToPostEvent;
 import progetto.mp.social.events.RemovedContentToPostEvent;
 
 public class Post extends SocialSubject implements Postable {
 
-	private Collection<Postable> contents=new ArrayList<>();
+	private Collection<Postable> contents = new ArrayList<>();
 
 	public Post(Postable... postables) {
-		for(Postable postable:postables) {
+		for (Postable postable : postables) {
 			contents.add(postable);
 		}
 	}
-	
+
 	public Post(Collection<Postable> postables) {
 		postables.forEach(e -> contents.add(e));
 	}
@@ -25,15 +26,10 @@ public class Post extends SocialSubject implements Postable {
 	 */
 	public Post() {
 	}
-	
+
 	@Override
 	public String getContent() {
-		StringBuilder content = new StringBuilder("");
-		contents.forEach(e -> {
-			content.append(e.getContent());
-			content.append("\n");
-		});
-		return content.toString();
+		return this.accept(new PostablePrintVisitor());
 	}
 
 	public void addContent(Postable postable) {
@@ -46,7 +42,19 @@ public class Post extends SocialSubject implements Postable {
 		notifyObservers(new RemovedContentToPostEvent(postable));
 	}
 
-	protected Collection<Postable> getContents() {
+	public Iterator<Postable> iterator() {
+		return contents.iterator();
+	}
+
+	/**
+	 * Only for testing
+	 */
+	Collection<Postable> getContents() {
 		return contents;
+	}
+
+	@Override
+	public <T> T accept(PostableVisitor<T> visitor) {
+		return visitor.visitPost(this);
 	}
 }

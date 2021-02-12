@@ -1,10 +1,10 @@
 package progetto.mp.social.events;
 
-import progetto.mp.social.Postable;
+import progetto.mp.social.Post;
 
 public final class AddedPostEvent extends SocialEvent {
 
-	public AddedPostEvent(Postable component) {
+	public AddedPostEvent(Post component) {
 		super(component);
 	}
 
