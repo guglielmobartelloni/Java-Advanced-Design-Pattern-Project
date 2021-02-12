@@ -81,9 +81,20 @@
   </class>  
   <class id="9" language="java" name="progetto.mp.social.events.SocialEventNotifierVisitor" 
     project="progetto.mp.guglielmo.bartelloni" 
+    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/SocialEventVisitorAdapter.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="185" y="681"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="progetto.mp.social.events.SocialEventNotifierVisitor" 
+    project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/SocialEventNotifierVisitor.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="264" y="887"/>    
+    <position height="-1" width="-1" x="521" y="698"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
