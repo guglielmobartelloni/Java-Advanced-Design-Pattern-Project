@@ -5,7 +5,7 @@ import java.util.Iterator;
 public class PostablePrintVisitor implements PostableVisitor<String> {
 
 	@Override
-	public String visitPostableImage(PostableImage image) {
+	public String visitPostableImage(PostableAsciiImage image) {
 		return "Image: " + image.getContent() + "\n";
 	}
 

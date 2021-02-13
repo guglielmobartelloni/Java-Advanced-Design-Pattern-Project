@@ -1,34 +1,26 @@
-package progetto.mp.social.events;
+package progetto.mp.social;
 
 
 import org.junit.Before;
 import org.junit.Test;
-
-import progetto.mp.social.Post;
-import progetto.mp.social.PostableAsciiImage;
-import progetto.mp.social.PostableText;
-import progetto.mp.social.utils.MockNotificationSender;
-
 import static org.assertj.core.api.Assertions.*;
-public class SocialEventNotifierVisitorTest {
-
-	private MockNotificationSender senderService;
-	private SocialEventNotifierVisitor visitor;
+public class PostablePrintVisitorTest {
+	
+	private PostablePrintVisitor visitor;
 	
 	@Before
 	public void setup() {
-		senderService=new MockNotificationSender();
-		visitor=new SocialEventNotifierVisitor(senderService,"aRecipient");
+		visitor=new PostablePrintVisitor();
 	}
 	
+
 	@Test
-	public void testAddedPostEvent() {
-		SocialEvent event=new AddedPostEvent(new Post(new PostableText("this is a postable text"), new PostableAsciiImage("image")));
-		event.accept(visitor);
-		assertThat(senderService.toString()).isEqualTo("Hello aRecipient\n"
-				+ " New Post: \n"
+	public void testVisitPost() {
+		Post post = new Post(new PostableText("this is a text"),new Post(new PostableText("this is a text inside a post"),new PostableAsciiImage("image")));
+		assertThat(post.accept(visitor)).isEqualTo("Post: \n"
+				+ "this is a text\n"
 				+ "Post: \n"
-				+ "this is a postable text\n"
+				+ "this is a text inside a post\n"
 				+ "Image:             $$$                                                                                     \n"
 				+ "            $$$                                                                                     \n"
 				+ "            $$$                                                                                     \n"
@@ -55,14 +47,9 @@ public class SocialEventNotifierVisitorTest {
 	}
 
 	@Test
-	public void testRemovedPostEvent() {
-		SocialEvent event=new RemovedPostEvent(new Post(new PostableText("this is a postable text"), new PostableAsciiImage("image")));
-		event.accept(visitor);
-		assertThat(senderService.toString()).isEqualTo("Hello aRecipient\n"
-				+ " A post has been removed: \n"
-				+ "Post: \n"
-				+ "this is a postable text\n"
-				+ "Image:             $$$                                                                                     \n"
+	public void testVisitPostableImage() {
+		PostableAsciiImage image = new PostableAsciiImage("image");
+		assertThat(image.accept(visitor)).isEqualTo("Image:             $$$                                                                                     \n"
 				+ "            $$$                                                                                     \n"
 				+ "            $$$                                                                                     \n"
 				+ "            $$$    $$$$$$$$$ $$$$$$     $$$$$$$$$     $$$$$$$$$$     $$$$$$$                        \n"
@@ -87,23 +74,9 @@ public class SocialEventNotifierVisitorTest {
 				+ "");
 	}
 
-	@Test
-	public void testAddedContentToPostEvent() {
-		SocialEvent event=new AddedContentToPostEvent(new PostableText("this is a postable text"));
-		event.accept(visitor);
-		assertThat(senderService.toString()).isEqualTo("Hello aRecipient\n"
-				+ " New content in a post: \n"
-				+ "this is a postable text\n"
-				+ "");
-	}
-
-	@Test
-	public void testRemovedContentToPostEvent() {
-		SocialEvent event=new RemovedContentToPostEvent(new PostableText("this is a postable text"));
-		event.accept(visitor);
-		assertThat(senderService.toString()).isEqualTo("Hello aRecipient\n"
-				+ " A content in a post has been removed: \n"
-				+ "this is a postable text\n"
-				+ "");
+@Test
+	public void testVisitPostableText() {
+		PostableText text = new PostableText("this is a text");
+		assertThat(text.accept(visitor)).isEqualTo("this is a text\n" + "");
 	}
 }

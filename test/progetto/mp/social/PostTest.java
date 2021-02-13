@@ -23,7 +23,7 @@ public class PostTest {
 		PostableText anotherText = new PostableText("this is a postable");
 		post.addContent(anotherText);
 		Post aPost = new Post(new PostableText("this is a text inside a post"),
-				new PostableText("this is another text inside a post"),new PostableImage("c:/path/to/file"));
+				new PostableText("this is another text inside a post"),new PostableAsciiImage("image"));
 		post.addContent(aPost);
 
 		assertThat(post.getContents()).containsExactly(aText, anotherText, aPost);
