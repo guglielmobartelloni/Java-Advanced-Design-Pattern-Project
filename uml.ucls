@@ -1,142 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="progetto.mp.social.SocialSubject" project="progetto.mp.guglielmo.bartelloni" 
-    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/SocialSubject.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="153" width="237" x="536" y="-128"/>    
+  <class id="1" language="java" name="progetto.mp.social.Post" project="progetto.mp.guglielmo.bartelloni" 
+    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/Post.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="967" y="345"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="2" language="java" name="progetto.mp.social.SocialObserver" project="progetto.mp.guglielmo.bartelloni" 
-    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/SocialObserver.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="81" width="177" x="702" y="312"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <class id="3" language="java" name="progetto.mp.social.Profile" project="progetto.mp.guglielmo.bartelloni" 
-    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/Profile.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="207" width="204" x="536" y="65"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="4" language="java" name="progetto.mp.social.Postable" project="progetto.mp.guglielmo.bartelloni" 
+  <interface id="2" language="java" name="progetto.mp.social.Postable" project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/Postable.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="157" x="250" y="577"/>    
+    <position height="-1" width="-1" x="644" y="62"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="5" language="java" name="progetto.mp.social.PostableAsciiImage" project="progetto.mp.guglielmo.bartelloni" 
+  <class id="3" language="java" name="progetto.mp.social.PostableAsciiImage" project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/PostableAsciiImage.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="153" width="185" x="4" y="312"/>    
+    <position height="-1" width="-1" x="413" y="382"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="6" language="java" name="progetto.mp.social.PostableVisitor" project="progetto.mp.guglielmo.bartelloni" 
-    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/PostableVisitor.java" binary="false" 
+  <class id="4" language="java" name="progetto.mp.social.PostableText" project="progetto.mp.guglielmo.bartelloni" 
+    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/PostableText.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="117" width="215" x="250" y="716"/>    
+    <position height="-1" width="-1" x="656" y="391"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="progetto.mp.social.Profile" project="progetto.mp.guglielmo.bartelloni" 
+    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/Profile.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1406" y="345"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="6" language="java" name="progetto.mp.social.SocialObserver" project="progetto.mp.guglielmo.bartelloni" 
+    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/SocialObserver.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1437" y="97"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="7" language="java" name="progetto.mp.social.PostableText" project="progetto.mp.guglielmo.bartelloni" 
-    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/PostableText.java" binary="false" 
+  <class id="7" language="java" name="progetto.mp.social.SocialSubject" project="progetto.mp.guglielmo.bartelloni" 
+    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/SocialSubject.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="135" width="157" x="229" y="312"/>    
+    <position height="-1" width="-1" x="1151" y="105"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="progetto.mp.social.Post" project="progetto.mp.guglielmo.bartelloni" 
-    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/Post.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="225" width="194" x="468" y="312"/>    
+  <interface id="8" language="java" name="progetto.mp.social.PostableVisitor" project="progetto.mp.guglielmo.bartelloni" 
+    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/PostableVisitor.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="760" y="705"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
-  </class>  
+  </interface>  
   <class id="9" language="java" name="progetto.mp.social.PostableRecursivePrintVisitor" 
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/PostableRecursivePrintVisitor.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="135" width="246" x="229" y="65"/>    
+    <position height="-1" width="-1" x="433" y="823"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="progetto.mp.social.events.AddedContentToPostEvent" 
+  <class id="10" language="java" name="progetto.mp.social.PostableNonRecursivePrintVisitor" 
+    project="progetto.mp.guglielmo.bartelloni" 
+    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/PostableNonRecursivePrintVisitor.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1070" y="781"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="progetto.mp.social.events.SocialEvent" project="progetto.mp.guglielmo.bartelloni" 
+    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/SocialEvent.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1663" y="-39"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="progetto.mp.social.events.AddedContentToPostEvent" 
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/AddedContentToPostEvent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="717" y="821"/>    
+    <position height="-1" width="-1" x="1841" y="245"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="progetto.mp.social.events.SocialEventNotifierVisitor" 
-    project="progetto.mp.guglielmo.bartelloni" 
-    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/SocialEventNotifierVisitor.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="971" y="637"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="12" language="java" name="progetto.mp.social.events.RemovedContentToPostEvent" 
+  <class id="13" language="java" name="progetto.mp.social.events.RemovedContentToPostEvent" 
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/RemovedContentToPostEvent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1401" y="821"/>    
+    <position height="-1" width="-1" x="2079" y="230"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="progetto.mp.social.events.AddedPostEvent" 
+  <class id="14" language="java" name="progetto.mp.social.events.AddedPostEvent" 
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/AddedPostEvent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="947" y="821"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="14" language="java" name="progetto.mp.social.events.SocialEvent" project="progetto.mp.guglielmo.bartelloni" 
-    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/SocialEvent.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1251" y="601"/>    
+    <position height="-1" width="-1" x="2326" y="231"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -147,255 +147,191 @@
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/RemovedPostEvent.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1164" y="821"/>    
+    <position height="-1" width="-1" x="2538" y="195"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="16" language="java" name="progetto.mp.social.events.SocialEventVisitor" 
+  <class id="16" language="java" name="progetto.mp.social.events.SocialEventNotifierVisitor" 
+    project="progetto.mp.guglielmo.bartelloni" 
+    file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/SocialEventNotifierVisitor.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1659" y="631"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="17" language="java" name="progetto.mp.social.events.SocialEventVisitor" 
     project="progetto.mp.guglielmo.bartelloni" 
     file="/progetto.mp.guglielmo.bartelloni/src/progetto/mp/social/events/SocialEventVisitor.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1156" y="978"/>    
+    <position height="-1" width="-1" x="2057" y="593"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <dependency id="17">    
-    <bendpoint x="458" y="577"/>    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="8"/>  
-  </dependency>  
   <dependency id="18">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="14"/>  
-  </dependency>  
-  <realization id="19">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="4"/>  
-  </realization>  
-  <dependency id="20">    
     <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="12"/>  
+    <end type="TARGET" refId="1"/>  
   </dependency>  
-  <realization id="21">    
-    <bendpoint x="437" y="312"/>    
-    <bendpoint x="437" y="577"/>    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="6"/>  
-  </realization>  
-  <dependency id="22">    
-    <bendpoint x="136" y="577"/>    
+  <dependency id="19">    
     <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="6"/>  
+    <end type="TARGET" refId="16"/>  
   </dependency>  
+  <association id="20">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="21" name="observers"/>      
+      <multiplicity id="22" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <dependency id="23">    
-    <end type="SOURCE" refId="3"/>    
+    <end type="SOURCE" refId="17"/>    
     <end type="TARGET" refId="13"/>  
   </dependency>  
   <dependency id="24">    
-    <bendpoint x="1539" y="772"/>    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="16"/>  
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="14"/>  
   </dependency>  
-  <dependency id="25">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="15"/>  
-  </dependency>  
+  <realization id="25">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="17"/>  
+  </realization>  
   <dependency id="26">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="4"/>  
+    <bendpoint x="1196" y="881"/>    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="9"/>  
   </dependency>  
   <dependency id="27">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="16"/>  
-  </dependency>  
-  <association id="28">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="29" name="contents">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="30" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="31">    
-    <bendpoint x="219" y="577"/>    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <dependency id="32">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="16"/>  
-  </dependency>  
-  <dependency id="33">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="10"/>  
-  </dependency>  
-  <realization id="34">    
-    <bendpoint x="585" y="772"/>    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="16"/>  
-  </realization>  
-  <dependency id="35">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="14"/>  
-  </dependency>  
-  <realization id="36">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <generalization id="37">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="14"/>  
-  </generalization>  
-  <dependency id="38">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <generalization id="39">    
-    <bendpoint x="505" y="65"/>    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <dependency id="40">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="8"/>  
-  </dependency>  
-  <dependency id="41">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <dependency id="42">    
-    <bendpoint x="416" y="312"/>    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
-  <generalization id="43">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <dependency id="44">    
-    <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="11"/>  
   </dependency>  
-  <dependency id="45">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="13"/>  
-  </dependency>  
-  <realization id="46">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="4"/>  
-  </realization>  
-  <dependency id="47">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="12"/>  
-  </dependency>  
-  <dependency id="48">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="14"/>  
-  </dependency>  
-  <dependency id="49">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
-  <association id="50">    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="51" name="component">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="52" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="53">    
-    <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="16"/>  
-  </dependency>  
-  <dependency id="54">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="10"/>  
-  </dependency>  
-  <dependency id="55">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <realization id="56">    
+  <dependency id="28">    
     <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="4"/>  
-  </realization>  
-  <generalization id="57">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="14"/>  
-  </generalization>  
-  <association id="58">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="59" name="posts">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="60" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="61">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="5"/>  
+    <end type="TARGET" refId="11"/>  
   </dependency>  
-  <generalization id="62">    
+  <generalization id="29">    
     <end type="SOURCE" refId="15"/>    
-    <end type="TARGET" refId="14"/>  
+    <end type="TARGET" refId="11"/>  
   </generalization>  
-  <dependency id="63">    
+  <dependency id="30">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="31">    
+    <bendpoint x="1716" y="315"/>    
     <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="17"/>  
+  </dependency>  
+  <realization id="32">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <dependency id="33">    
+    <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="4"/>  
   </dependency>  
-  <dependency id="64">    
-    <end type="SOURCE" refId="11"/>    
+  <realization id="34">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <generalization id="35">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <generalization id="36">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <dependency id="37">    
+    <end type="SOURCE" refId="17"/>    
     <end type="TARGET" refId="15"/>  
   </dependency>  
-  <dependency id="65">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="16"/>  
+  <dependency id="38">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="3"/>  
   </dependency>  
-  <association id="66">    
-    <bendpoint x="770" y="65"/>    
+  <generalization id="39">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <realization id="40">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <association id="41">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="67" name="observers">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="68" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
+      <attribute id="42" name="contents"/>      
+      <multiplicity id="43" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="69">    
+  <association id="44">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="45" name="component"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="47">    
+    <bendpoint x="1748" y="480"/>    
+    <bendpoint x="1545" y="214"/>    
+    <bendpoint x="986" y="197"/>    
     <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <realization id="48">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <dependency id="49">    
+    <bendpoint x="774" y="391"/>    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="8"/>  
   </dependency>  
-  <dependency id="70">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="7"/>  
+  <dependency id="50">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="12"/>  
   </dependency>  
-  <generalization id="71">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="14"/>  
+  <dependency id="51">    
+    <bendpoint x="944" y="205"/>    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <realization id="52">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <realization id="53">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <association id="54">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="55" name="posts"/>      
+      <multiplicity id="56" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="57">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="11"/>  
   </generalization>  
-  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+  <generalization id="58">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="11"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="false" package="false" initial-value="true" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
     <operations public="true" package="true" protected="true" private="true" static="true"/>  
