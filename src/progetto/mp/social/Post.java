@@ -10,26 +10,30 @@ import progetto.mp.social.events.RemovedContentToPostEvent;
 public class Post extends SocialSubject implements Postable {
 
 	private Collection<Postable> contents = new ArrayList<>();
+	private String title;
 
-	public Post(Postable... postables) {
+	public Post(String title, Postable... postables) {
+		this.title = title;
 		for (Postable postable : postables) {
 			contents.add(postable);
 		}
 	}
 
-	public Post(Collection<Postable> postables) {
+	public Post(String title, Collection<Postable> postables) {
+		this.title = title;
 		postables.forEach(e -> contents.add(e));
 	}
 
 	/**
 	 * Empty post
 	 */
-	public Post() {
+	public Post(String title) {
+		this.title = title;
 	}
 
 	@Override
 	public String getContent() {
-		return this.accept(new PostablePrintVisitor());
+		return this.accept(new PostableRecursivePrintVisitor());
 	}
 
 	public void addContent(Postable postable) {
@@ -51,6 +55,10 @@ public class Post extends SocialSubject implements Postable {
 	 */
 	Collection<Postable> getContents() {
 		return contents;
+	}
+
+	public String getTitle() {
+		return title;
 	}
 
 	@Override

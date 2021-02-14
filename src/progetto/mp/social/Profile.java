@@ -22,7 +22,6 @@ public class Profile extends SocialSubject implements SocialObserver {
 		this.senderService = senderService;
 	}
 
-	
 	public void addPost(Post post) {
 		posts.add(post);
 		notifyObservers(new AddedPostEvent(post));
@@ -48,6 +47,5 @@ public class Profile extends SocialSubject implements SocialObserver {
 	public void notifyChange(SocialEvent event) {
 		event.accept(new SocialEventNotifierVisitor(senderService, surname));
 	}
-
 
 }

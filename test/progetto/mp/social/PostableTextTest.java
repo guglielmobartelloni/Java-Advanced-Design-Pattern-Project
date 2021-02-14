@@ -13,8 +13,8 @@ public class PostableTextTest {
 
 	@Test
 	public void testGetEmptyContent() {
-		assertThatIllegalArgumentException().isThrownBy(() -> new PostableText("").getContent()).withMessage("The text to convert cannot be empty");
+		assertThatIllegalArgumentException().isThrownBy(() -> new PostableText("").getContent())
+				.withMessage("The text to convert cannot be empty");
 	}
-
 
 }

@@ -20,7 +20,7 @@ public class MockNotificationSender extends NotificationSender {
 	 */
 	@Override
 	public void send(String message, String recipient) {
-		this.sendingMessage ="Hello "+recipient+  "\n " + message ;
+		this.sendingMessage = "Hello " + recipient + "\n " + message;
 	}
 
 	@Override

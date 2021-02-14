@@ -20,7 +20,7 @@ public class PostableAsciiImage implements Postable {
 			throw new IllegalArgumentException("The text to convert cannot be empty");
 		}
 
-		if (textToConvertInAscii.length()>8) {
+		if (textToConvertInAscii.length() > 8) {
 			throw new IllegalArgumentException("The text is too long for being visualized");
 		}
 	}
@@ -29,7 +29,6 @@ public class PostableAsciiImage implements Postable {
 	public String getContent() {
 		return convertTextToAsciiImage();
 	}
-
 
 	@Override
 	public <T> T accept(PostableVisitor<T> visitor) {
@@ -48,8 +47,7 @@ public class PostableAsciiImage implements Postable {
 		graphics.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
 		graphics.drawString(textToConvert, 10, 20);
 
-
-			StringBuilder outputAsciiText = new StringBuilder();
+		StringBuilder outputAsciiText = new StringBuilder();
 		for (int y = 0; y < height; y++) {
 			StringBuilder partialAsciiText = new StringBuilder();
 			for (int x = 0; x < width; x++) {

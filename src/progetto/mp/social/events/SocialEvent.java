@@ -4,7 +4,7 @@ import progetto.mp.social.Postable;
 
 public abstract class SocialEvent {
 
-	protected Postable component;
+	private Postable component;
 
 	public SocialEvent(Postable component) {
 		this.component = component;

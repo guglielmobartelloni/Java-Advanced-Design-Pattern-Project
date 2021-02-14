@@ -13,7 +13,7 @@ public class PostTest {
 
 	@Before
 	public void setup() {
-		post = new Post();
+		post = new Post("this is a post");
 	}
 
 	@Test
@@ -22,20 +22,25 @@ public class PostTest {
 		post.addContent(aText);
 		PostableText anotherText = new PostableText("this is a postable");
 		post.addContent(anotherText);
-		Post aPost = new Post(new PostableText("this is a text inside a post"),
-				new PostableText("this is another text inside a post"),new PostableAsciiImage("image"));
+		Post aPost = new Post("aPost", new PostableText("this is a text inside a post"),
+				new PostableText("this is another text inside a post"), new PostableAsciiImage("image"));
 		post.addContent(aPost);
 
 		assertThat(post.getContents()).containsExactly(aText, anotherText, aPost);
 	}
 
 	@Test
-	public void testAddAndRemoveContent() {
+	public void testGetTitle() {
+		assertThat(new Post("this is a title").getTitle()).isEqualTo("this is a title");
+	}
+
+	@Test
+	public void testRemoveContent() {
 		PostableText aText = new PostableText("this is a second postable");
 		post.addContent(aText);
 		PostableText anotherText = new PostableText("this is a postable");
 		post.addContent(anotherText);
-		Post aPost = new Post(new PostableText("this is a text inside a post"),
+		Post aPost = new Post("aPost", new PostableText("this is a text inside a post"),
 				new PostableText("this is another text inside a post"));
 		post.addContent(aPost);
 
@@ -45,25 +50,39 @@ public class PostTest {
 	}
 
 	@Test
+	public void testAttachDetachObserver() {
+		Profile aProfile = new Profile("aProfile", new MockNotificationSender());
+		post.attach(aProfile);
+
+		Profile aSecondProfile = new Profile("aSecondProfile", new MockNotificationSender());
+		post.attach(aSecondProfile);
+
+		assertThat(post.getObservers()).containsExactly(aProfile, aSecondProfile);
+		post.detach(aSecondProfile);
+
+		assertThat(post.getObservers()).containsExactly(aProfile);
+	}
+
+	@Test
 	public void testGetContentNonEmptyPost() {
 		PostableText aText = new PostableText("this is a second postable");
 		post.addContent(aText);
 		PostableText anotherText = new PostableText("this is a postable");
 		post.addContent(anotherText);
-		Post aPost = new Post(new PostableText("this is a text inside a post"),
+		Post aPost = new Post("aPost", new PostableText("this is a text inside a post"),
 				new PostableText("this is another text inside a post"),
-				new Post(new PostableText("this is a text inside a post inside another post")));
+				new Post("anotherPost", new PostableText("this is a text inside a post inside another post")));
 		post.addContent(aPost);
 
-		assertThat(post.getContent()).isEqualTo("Post: \n" + "this is a second postable\n" + "this is a postable\n"
-				+ "Post: \n" + "this is a text inside a post\n" + "this is another text inside a post\n" + "Post: \n"
-				+ "this is a text inside a post inside another post\n" + "");
+		assertThat(post.getContent())
+				.isEqualTo("Post: this is a post\n" + "this is a second postable\n" + "this is a postable\n"
+						+ "Post: aPost\n" + "this is a text inside a post\n" + "this is another text inside a post\n"
+						+ "Post: anotherPost\n" + "this is a text inside a post inside another post\n" + "");
 	}
 
 	@Test
 	public void testGetContentEmptyPost() {
-		assertThat(post.getContent()).isEqualTo("Post: \n"
-				+ "");
+		assertThat(post.getContent()).isEqualTo("Post: this is a post\n" + "");
 	}
 
 	@Test
@@ -79,20 +98,12 @@ public class PostTest {
 		PostableText anotherText = new PostableText("this is a postable");
 		post.addContent(anotherText);
 		assertThat(senderService.toString())
-				.isEqualTo("Hello aProfile\n"
-						+ " New content in a post: \n"
-						+ "this is a postable\n"
-						+ "");
-		Post aPost = new Post(new PostableText("this is a text inside a post"),
+				.isEqualTo("Hello aProfile\n" + " New content in a post: \n" + "this is a postable\n" + "");
+		Post aPost = new Post("aPost", new PostableText("this is a text inside a post"),
 				new PostableText("this is another text inside a post"));
 		post.addContent(aPost);
-		assertThat(senderService.toString())
-				.isEqualTo("Hello aProfile\n"
-						+ " New content in a post: \n"
-						+ "Post: \n"
-						+ "this is a text inside a post\n"
-						+ "this is another text inside a post\n"
-						+ "");
+		assertThat(senderService.toString()).isEqualTo("Hello aProfile\n" + " New content in a post: \n"
+				+ "Post: aPost\n" + "this is a text inside a post\n" + "this is another text inside a post\n" + "");
 
 	}
 
@@ -102,17 +113,13 @@ public class PostTest {
 		post.addContent(anotherText);
 		PostableText aText = new PostableText("this is a second postable");
 		post.addContent(aText);
-		Post aPost = new Post(new PostableText("this is a text inside a post"),
+		Post aPost = new Post("aPost", new PostableText("this is a text inside a post"),
 				new PostableText("this is another text inside a post"));
 		post.addContent(aPost);
 
-		assertThat(post.getContent()).isEqualTo("Post: \n"
-				+ "this is a postable\n"
-				+ "this is a second postable\n"
-				+ "Post: \n"
-				+ "this is a text inside a post\n"
-				+ "this is another text inside a post\n"
-				+ "");
+		assertThat(post.getContent()).isEqualTo(
+				"Post: this is a post\n" + "this is a postable\n" + "this is a second postable\n" + "Post: aPost\n"
+						+ "this is a text inside a post\n" + "this is another text inside a post\n" + "");
 	}
 
 	@Test
@@ -125,26 +132,18 @@ public class PostTest {
 
 		PostableText anotherText = new PostableText("this is a postable");
 		post.addContent(anotherText);
-		Post aPost = new Post(new PostableText("this is a text inside a post"),
+		Post aPost = new Post("aPost", new PostableText("this is a text inside a post"),
 				new PostableText("this is another text inside a post"));
 		post.addContent(aPost);
 
 		post.removeContent(aPost);
 
-		assertThat(senderService.toString())
-				.isEqualTo("Hello aProfile\n"
-						+ " A content in a post has been removed: \n"
-						+ "Post: \n"
-						+ "this is a text inside a post\n"
-						+ "this is another text inside a post\n"
-						+ "");
+		assertThat(senderService.toString()).isEqualTo("Hello aProfile\n" + " A content in a post has been removed: \n"
+				+ "Post: aPost\n" + "this is a text inside a post\n" + "this is another text inside a post\n" + "");
 
 		post.removeContent(anotherText);
 
-		assertThat(senderService.toString())
-				.isEqualTo("Hello aProfile\n"
-						+ " A content in a post has been removed: \n"
-						+ "this is a postable\n"
-						+ "");
+		assertThat(senderService.toString()).isEqualTo(
+				"Hello aProfile\n" + " A content in a post has been removed: \n" + "this is a postable\n" + "");
 	}
 }

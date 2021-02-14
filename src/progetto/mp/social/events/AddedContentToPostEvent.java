@@ -2,7 +2,7 @@ package progetto.mp.social.events;
 
 import progetto.mp.social.Postable;
 
-public final class AddedContentToPostEvent extends SocialEvent{
+public final class AddedContentToPostEvent extends SocialEvent {
 
 	public AddedContentToPostEvent(Postable component) {
 		super(component);
